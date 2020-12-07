@@ -60,14 +60,6 @@ THEN the saved events persist
 
 ---
 ## Images
-### Welcome Screen
+### Desktop View
 
-![Image of welcome screen](./assets/images/PortfolioHero.jpeg)
-
-### Question Screen
-
-![Image of question screen](./assets/images/questionScreen.png)
-
-### High Scores Screen
-
-![Image of high scores screen](./assets/images/highScoreScreen.png)
+![Desktop view of workday scheduler](./assets/images/desktopView.png)

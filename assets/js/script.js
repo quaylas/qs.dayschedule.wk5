@@ -37,7 +37,7 @@ var saveWorkDay = function(){
 
 var auditTimeBlock = function(timeBlock, timeBlockDescriptionEl) {
     timeBlockHour = moment(timeBlock.hour).format('H');
-    currentHour = moment().hour(11).format('H'); //remove.hour(9)
+    currentHour = moment().format('H'); 
 
     if(timeBlockHour - currentHour < 0){
         timeBlockDescriptionEl.addClass('past');

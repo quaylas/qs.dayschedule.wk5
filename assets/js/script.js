@@ -50,26 +50,28 @@ var auditTimeBlock = function(timeBlock, timeBlockDescriptionEl) {
 
 }
 // generate and audit the schedule based on the workDay
-workDay.forEach(function(timeBlock){
+var populateSchedule = function() {
 
-    // create timeBlock row and elements
-    var timeBlockRow = $("<div>").addClass("row time-block")
-    .attr("id", timeBlock.id);
-    var timeBlockHour = $("<div>").addClass("col-lg-2 hour").text(moment(timeBlock.hour).format('ha'));
-    var timeBlockDescription = $('<div>').addClass("col-lg-8 description");
-    var descriptionContents = $('<div>').text(timeBlock.description);
-    var timeBlockSave = $('<div>').addClass("col-lg-2 saveBtn").html('<i class="fas fa-save"></i>');
+    workDay.forEach(function(timeBlock){
+        // create timeBlock row and elements
+        var timeBlockRow = $("<div>").addClass("row time-block")
+        .attr("id", timeBlock.id);
+        var timeBlockHour = $("<div>").addClass("col-lg-2 hour").text(moment(timeBlock.hour).format('ha'));
+        var timeBlockDescription = $('<div>').addClass("col-lg-8 description");
+        var descriptionContents = $('<div>').text(timeBlock.description);
+        var timeBlockSave = $('<div>').addClass("col-lg-2 saveBtn").html('<i class="fas fa-save"></i>');
 
-    // audit each timeBlock to ensure the correct color coding is applied
-    auditTimeBlock(timeBlock, timeBlockDescription);
+        // audit each timeBlock to ensure the correct color coding is applied
+        auditTimeBlock(timeBlock, timeBlockDescription);
 
-    // append timeBlock row elements to row
-    timeBlockDescription.append(descriptionContents);
-    timeBlockRow.append(timeBlockHour,timeBlockDescription,timeBlockSave);
+        // append timeBlock row elements to row
+        timeBlockDescription.append(descriptionContents);
+        timeBlockRow.append(timeBlockHour,timeBlockDescription,timeBlockSave);
 
-    // append timeBlock row to container
-    container.append(timeBlockRow);
-});
+        // append timeBlock row to container
+        container.append(timeBlockRow);
+    });
+}
 
 
 $(".container").on("click",".description", function() {
@@ -105,3 +107,4 @@ $(".container").on("blur", "textarea", function(){
 });
 
 createWorkDay();
+populateSchedule();

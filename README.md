@@ -2,7 +2,7 @@
 
 For this week's challenge, we built a simple workday scheduler using Bootstrap and JQuery libraries, along with Moment.js and assorted other open source tools. 
 
-The scheduler can be accessed live [here](https://quaylas.github.io/qs.workday.wk5).
+The scheduler can be accessed live [here](https://quaylas.github.io/qs.dayschedule.wk5).
 
 Table of Contents
 * [User Story and Acceptance Criteria](#user-story-and-acceptance-criteria)

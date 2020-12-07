@@ -73,7 +73,7 @@ p {
 
 .future {
     background-color: var(--medium);
-    color: var(--dark);
+    color: var(--light);
 }
 
 .saveBtn {

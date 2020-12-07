@@ -54,6 +54,7 @@ THEN the saved events persist
 ## Key Features
 
 * The scheduler color-codes hours of the day according to their relationship to the current time (past, present, or future)
+* The scheduler saves all previously entered events in local storage
 
 ---
 

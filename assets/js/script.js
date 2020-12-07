@@ -24,6 +24,7 @@ var createWorkDay = function() {
                 description: ''
             }
             workDay.push(timeBlock);
+            console.log(timeBlock.hour);
         }
         localStorage.setItem('workDay',JSON.stringify(workDay));
     }
@@ -36,7 +37,7 @@ var saveWorkDay = function(){
 
 var auditTimeBlock = function(timeBlock, timeBlockDescriptionEl) {
     timeBlockHour = moment(timeBlock.hour).format('H');
-    currentHour = moment().format('H');
+    currentHour = moment().hour(11).format('H'); //remove.hour(9)
 
     if(timeBlockHour - currentHour < 0){
         timeBlockDescriptionEl.addClass('past');

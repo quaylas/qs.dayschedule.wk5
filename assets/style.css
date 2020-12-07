@@ -86,7 +86,7 @@ p {
 }
 
 .saveBtn:hover {
-    color: fuchsia;
+    color: rgb(249,190,157);
     transition: all .3s ease-in-out;
 }
 

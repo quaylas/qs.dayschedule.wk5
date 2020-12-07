@@ -24,7 +24,6 @@ var createWorkDay = function() {
                 description: ''
             }
             workDay.push(timeBlock);
-            console.log(timeBlock.hour);
         }
         localStorage.setItem('workDay',JSON.stringify(workDay));
     }
@@ -95,7 +94,6 @@ $(".container").on("blur", "textarea", function(){
     .trim();
 
     workDay[id].description = text;
-    console.log(workDay[id]);
 
     saveWorkDay();
 
